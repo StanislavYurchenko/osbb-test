@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header container">
+    <header class="header">
+      <h1 class="visually-hidden">ОСББ "Тест"</h1>
       <div class="header__top-box">
         <address class="header__address address">
           <a
@@ -57,7 +58,12 @@
             <use href="./img/sprite.svg#icon-logo"></use>
           </svg>
         </div>
-        <div class="header__nav-burger"></div>
+
+        <input class="header__nav-burger-lbl" type="checkbox" id="burger" />
+
+        <label class="header__nav-burger-box" for="burger">
+          <div class="header__nav-burger"></div>
+        </label>
 
         <nav class="header__nav nav">
           <ul class="nav__list list">
@@ -84,7 +90,7 @@
       </div>
     </header>
     <main>
-      <section class="section__registration section container">
+      <section class="section__registration section">
         <h2 class="visually-hidden">Регистрация</h2>
         <form class="registration__form form" action="#">
           <span class="form__title">Зарегистрируйтесь сейчас </span>
@@ -343,7 +349,7 @@
           </div>
         </div>
       </section>
-      <section class="section__tariffs section container">
+      <section class="section__tariffs section">
         <form class="tariffs">
           <h2 class="tariffs__title">тарифы</h2>
           <div class="tariffs__box">
@@ -670,7 +676,7 @@
       </div>
     </main>
 
-    <footer class="footer container">
+    <footer class="footer">
       <div class="socials-box">
         <svg class="socials__logo logo">
           <use href="./img/sprite.svg#icon-logo"></use>
@@ -794,5 +800,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

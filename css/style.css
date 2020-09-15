@@ -306,7 +306,6 @@ img {
   color: #4b5464;
 }
 .header__nav {
-  display: none;
 }
 
 .header__nav .nav__link {
@@ -317,12 +316,21 @@ img {
   line-height: 152%;
   color: #6e788d;
 }
+.header__nav .nav__link:hover {
+  color: #86bc42;
+}
 .header__nav .nav__link::before {
   display: none;
 }
+.header__nav-burger-box {
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
 .header__nav-burger {
-  position: relative;
 }
 .header__nav-burger,
 .header__nav-burger:before,
@@ -332,18 +340,39 @@ img {
   height: 3px;
   background-color: #86bc42;
   border-radius: 2px;
+  transition: all 0.2s linear;
 }
 .header__nav-burger:before,
 .header__nav-burger:after {
   position: absolute;
 }
 .header__nav-burger:before {
-  top: 6px;
+  transform: translateY(-6px);
+}
+.header__nav-burger-box:hover .header__nav-burger:before {
+  transform: translateY(-10px);
 }
 .header__nav-burger:after {
-  bottom: 6px;
+  transform: translateY(6px);
 }
-.header__nav {
+.header__nav-burger-box:hover .header__nav-burger:after {
+  transform: translateY(10px);
+}
+.header__nav-burger-lbl {
+  display: none;
+}
+.header__nav-burger-lbl:checked + .header__nav-burger-box .header__nav-burger {
+  transform: rotateZ(45deg);
+}
+.header__nav-burger-lbl:checked
+  + .header__nav-burger-box
+  .header__nav-burger:before {
+  transform: rotateZ(0deg);
+}
+.header__nav-burger-lbl:checked
+  + .header__nav-burger-box
+  .header__nav-burger:after {
+  transform: rotateZ(90deg);
 }
 .nav__list {
 }
@@ -360,12 +389,14 @@ img {
   padding-bottom: 30px;
 }
 .registration__form {
+  max-width: 450px;
   padding: 18px;
   background: rgba(47, 45, 55, 0.25);
   backdrop-filter: blur(5.92381px);
   border-radius: 3.70238px;
   color: #ffffff;
   text-align: center;
+  margin: 0 auto;
 }
 .form__title {
   font-family: 'Mulish', sans-serif;
@@ -390,7 +421,11 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
+  /* max-width: 400px; */
+  margin: 0 auto;
 }
+
 .form__input-name,
 .form__input-phone {
   border-radius: 15px;
@@ -412,11 +447,11 @@ img {
 }
 .form__input-name:required:valid:focus:not(:placeholder-shown),
 .form__input-phone:required:valid:focus:not(:placeholder-shown) {
-  outline: 1px solid greenyellow;
+  outline: 1px solid #86bc42;
 }
 .form__input-name:required:invalid:focus:not(:placeholder-shown),
 .form__input-phone:required:invalid:focus:not(:placeholder-shown) {
-  outline: 1px solid red;
+  outline: 1px solid orange;
 }
 
 .registration__btn {
@@ -533,6 +568,8 @@ img {
   padding: 27px 31px;
   font-family: 'Open Sans', sans-serif;
   color: #6e788d;
+  width: 345px;
+  margin: 0 auto;
 }
 .tariffs__title {
   font-family: 'Mulish', sans-serif;
@@ -879,9 +916,7 @@ img {
 .nav__link {
   color: #ffffff;
 }
-.nav__link:hover {
-  color: #86bc42;
-}
+
 .nav__link::before {
   content: '';
   display: block;
@@ -968,18 +1003,68 @@ img {
   .form__input-box {
     padding: 10px;
     border-radius: 24px;
-    background-color: #fff;
     margin-bottom: 8px;
+    /* max-width: 400px; */
   }
   .form__steps {
     display: none;
   }
+
   .photo__control {
     display: none;
     margin: 0 auto;
   }
   .photo__item:not(:last-child) {
     margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .header__bottom-box {
+    position: relative;
+  }
+  .header__nav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #4b5464;
+    padding: 50px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: all 0.3s linear;
+  }
+  .header__nav-burger-lbl:checked + .header__nav-burger-box + .header__nav {
+    transform: translateX(0%);
+  }
+  .header__nav--active {
+    transform: translateX(0%);
+  }
+  .header__nav .nav__list {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .header__nav .nav__item {
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+  .header__nav .nav__item:hover {
+    border: 1px solid #86bc42;
+  }
+  .header__nav .nav__item:hover .nav__link {
+    color: #86bc42;
+  }
+
+  .header__nav .nav__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .header__nav .nav__link {
+    color: #fff;
   }
 }
 
@@ -1020,6 +1105,7 @@ img {
   }
 
   .registration__form {
+    max-width: 700px;
     padding: 34px 60px;
     display: flex;
     flex-direction: column;
@@ -1027,12 +1113,10 @@ img {
   }
   .form__title {
     font-size: 24px;
-    max-width: 418px;
   }
   .form__sub-title {
     font-size: 16px;
     margin-bottom: 46px;
-    max-width: 418px;
   }
   .form-box {
     display: flex;
@@ -1042,7 +1126,6 @@ img {
     border-radius: 24px;
     background-color: #fff;
     margin-bottom: 35px;
-    max-width: 418px;
   }
   .form__input-box {
     padding-right: 11px;
@@ -1155,6 +1238,7 @@ img {
   }
   .tariffs {
     padding: 26px 23px 21px;
+    width: 708px;
   }
   .tariffs__box {
     display: flex;
@@ -1255,7 +1339,7 @@ img {
   .header__registration-btn {
     padding: 15px 26px;
   }
-  .header__nav-burger {
+  .header__nav-burger-box {
     display: none;
   }
   .header__nav {
@@ -1272,20 +1356,21 @@ img {
     background-image: url(../img/registration-bg/registration-bg-lg.jpg);
   }
   .registration__form {
+    max-width: 840px;
     display: block;
     padding: 46px 136px;
   }
   .form-box {
-    max-width: 569px;
+    /* max-width: 569px; */
     border-radius: 35px;
     padding: 14px 18px;
   }
   .form__title {
-    max-width: 569px;
+    /* max-width: 569px; */
     font-size: 36px;
   }
   .form__sub-title {
-    max-width: 569px;
+    /* max-width: 569px; */
     font-size: 20px;
   }
   .form__input-box {
@@ -1339,10 +1424,15 @@ img {
     width: 458px;
     flex-shrink: 0;
     flex-grow: 1;
+    z-index: 10;
+    background-color: #fff;
   }
   .section__tariffs {
     background-image: url(../img/tariffs-bg/tariffs-bg-lg.jpg);
     padding: 48px 135px;
+  }
+  .tariffs {
+    width: 1010px;
   }
   .tariffs__box-rigth,
   .tariffs__box-left {
