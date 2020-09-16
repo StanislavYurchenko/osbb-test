@@ -213,6 +213,17 @@ img {
 .header__address {
   width: 58.67%;
 }
+.header__phone,
+.header__mail {
+  border: 5px solid #4b5464;
+  transition: all 0.3s linear;
+}
+.header__phone:hover,
+.header__mail:hover {
+  border: 5px solid #fff;
+  border-radius: 20px;
+  color: #86bc42;
+}
 
 .address__link {
   display: flex;
@@ -261,12 +272,33 @@ img {
   background-color: #86bc42;
   border: none;
   width: 100%;
+  cursor: pointer;
+  border: 5px solid #86bc42;
+  transition: all 0.3s linear;
+}
+.header__registration-btn:hover {
+  border: 5px solid #fff;
+  border-radius: 20px;
 }
 .header__log-in-btn {
   display: flex;
   background-color: #4b5464;
   border: none;
   width: 100%;
+  cursor: pointer;
+  border: 5px solid #4b5464;
+  transition: all 0.3s linear;
+}
+.header__log-in-btn:hover {
+  border: 5px solid #fff;
+  border-radius: 20px;
+}
+.header__log-in-btn:hover .log-in__text {
+  color: #86bc42;
+}
+.header__log-in-btn:hover .log-in__svg--arrow,
+.header__log-in-btn:hover .log-in__svg--man {
+  fill: #86bc42;
 }
 .log-in__svg--man {
   width: 26px;
@@ -274,15 +306,18 @@ img {
   fill: #fff;
   margin-right: 3px;
   margin-left: 12px;
+  transition: all 0.2s linear;
 }
 .log-in__svg--arrow {
   width: 7px;
   height: 7px;
   fill: #fff;
   margin-right: 9px;
+  transition: all 0.2s linear;
 }
 .log-in__text {
   color: #fff;
+  transition: all 0.2s linear;
 }
 
 .header__bottom-box {
@@ -377,6 +412,10 @@ img {
 .nav__list {
 }
 .nav__item {
+}
+
+.nav__item:hover .nav__link {
+  color: #86bc42;
 }
 
 /* SECTION REGISTRATION */
@@ -1055,9 +1094,6 @@ img {
   }
   .header__nav .nav__item:hover {
     border: 1px solid #86bc42;
-  }
-  .header__nav .nav__item:hover .nav__link {
-    color: #86bc42;
   }
 
   .header__nav .nav__item:not(:last-child) {
