@@ -176,6 +176,7 @@ img {
   border-radius: 22px;
   position: relative;
   margin: 0 auto;
+  cursor: pointer;
 }
 .section__button:after {
   content: '';
@@ -186,10 +187,14 @@ img {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
-}
 
+  transition: all 0.2s linear;
+}
+.section__button:hover:after {
+  transform: translateX(100%);
+}
 .logo {
+  cursor: pointer;
 }
 .nav {
 }
@@ -219,7 +224,9 @@ img {
   transition: all 0.3s linear;
 }
 .header__phone:hover,
-.header__mail:hover {
+.header__phone:active,
+.header__mail:hover,
+.header__mail:active {
   border: 5px solid #fff;
   border-radius: 20px;
   color: #86bc42;
@@ -276,7 +283,8 @@ img {
   border: 5px solid #86bc42;
   transition: all 0.3s linear;
 }
-.header__registration-btn:hover {
+.header__registration-btn:hover,
+.header__registration-btn:active {
   border: 5px solid #fff;
   border-radius: 20px;
 }
@@ -289,15 +297,19 @@ img {
   border: 5px solid #4b5464;
   transition: all 0.3s linear;
 }
-.header__log-in-btn:hover {
+.header__log-in-btn:hover,
+.header__log-in-btn:active {
   border: 5px solid #fff;
   border-radius: 20px;
 }
-.header__log-in-btn:hover .log-in__text {
+.header__log-in-btn:hover .log-in__text,
+.header__log-in-btn:active .log-in__text {
   color: #86bc42;
 }
 .header__log-in-btn:hover .log-in__svg--arrow,
-.header__log-in-btn:hover .log-in__svg--man {
+.header__log-in-btn:active .log-in__svg--arrow,
+.header__log-in-btn:hover .log-in__svg--man,
+.header__log-in-btn:active .log-in__svg--man {
   fill: #86bc42;
 }
 .log-in__svg--man {
@@ -350,8 +362,10 @@ img {
   line-height: 21px;
   line-height: 152%;
   color: #6e788d;
+  transition: all 0.2s linear;
 }
-.header__nav .nav__link:hover {
+.header__nav .nav__link:hover,
+.header__nav .nav__link:active {
   color: #86bc42;
 }
 .header__nav .nav__link::before {
@@ -384,13 +398,15 @@ img {
 .header__nav-burger:before {
   transform: translateY(-6px);
 }
-.header__nav-burger-box:hover .header__nav-burger:before {
+.header__nav-burger-box:hover .header__nav-burger:before,
+.header__nav-burger-box:active .header__nav-burger:before {
   transform: translateY(-10px);
 }
 .header__nav-burger:after {
   transform: translateY(6px);
 }
-.header__nav-burger-box:hover .header__nav-burger:after {
+.header__nav-burger-box:hover .header__nav-burger:after,
+.header__nav-burger-box:active .header__nav-burger:after {
   transform: translateY(10px);
 }
 .header__nav-burger-lbl {
@@ -414,7 +430,8 @@ img {
 .nav__item {
 }
 
-.nav__item:hover .nav__link {
+.nav__item:hover .nav__link,
+.nav__item:active .nav__link {
   color: #86bc42;
 }
 
@@ -506,6 +523,7 @@ img {
   text-align: center;
   text-transform: uppercase;
   padding: 7px 18px;
+  cursor: pointer;
 }
 
 /* SECTION PHOTOS */
@@ -570,6 +588,7 @@ img {
   justify-content: center;
   align-items: center;
   margin-right: 19px;
+  transition: all 0.5s linear;
 }
 .utilities__item-img {
 }
@@ -587,6 +606,9 @@ img {
   line-height: 19px;
   text-decoration-line: underline;
   color: #9ca3ab;
+}
+.utilities__item:hover .utilities__item-img-box {
+  transform: rotateZ(360deg);
 }
 
 /* SECTION TARIFFS */
@@ -793,6 +815,9 @@ img {
   margin: 0 0 21px;
 }
 .slide__img {
+}
+.slide__img img,
+.slide__img source {
   margin: 0 auto;
 }
 .slid__content {
@@ -815,6 +840,7 @@ img {
   align-items: center;
   justify-content: flex-end;
   margin: 0;
+  cursor: pointer;
 }
 .read-more__content {
   font-family: 'Mulish', sans-serif;
@@ -837,16 +863,21 @@ img {
   margin: 0 auto;
 }
 
-.control__prev-img {
-  width: 45px;
-  height: 6px;
-  fill: #6e788d;
-}
+.control__prev-img,
 .control__next-img {
   width: 45px;
   height: 6px;
   fill: #6e788d;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
+.control__prev-img:hover,
+.control__prev-img:active,
+.control__next-img:hover,
+.control__next-img:active {
+  fill: #86bc42;
+}
+
 .control__list {
   display: flex;
   align-items: center;
@@ -858,7 +889,15 @@ img {
   background-color: #6e788d;
   border: 1px solid #6e788d;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
+.control__item:hover,
+.control__item:active {
+  background-color: #86bc42;
+  border: 1px solid #86bc42;
+}
+
 .control__item:not(:last-child) {
   margin-right: 17px;
 }
@@ -867,6 +906,11 @@ img {
   height: 21px;
   background-color: #fff;
   border: 1px solid #6e788d;
+}
+.control__item--active:hover,
+.control__item--active:active {
+  background-color: #fff;
+  border: 1px solid #86bc42;
 }
 
 /* FOOTER */
@@ -954,6 +998,7 @@ img {
 }
 .nav__link {
   color: #ffffff;
+  transition: all 0.2s linear;
 }
 
 .nav__link::before {
@@ -969,7 +1014,8 @@ img {
   cursor: pointer;
 }
 
-.nav__item:hover .nav__link::before {
+.nav__item:hover .nav__link::before,
+.nav__item:active .nav__link::before {
   background-image: url(../img/list-arrow-active.svg);
 }
 /* FOOTER ADDRESS */
@@ -998,7 +1044,15 @@ img {
   fill: #4b5464;
   stroke: #86bc42;
 }
+.footer__mail-text,
 .footer__phone-text {
+  transition: all 0.2s linear;
+}
+.footer__mail-text:hover,
+.footer__mail-text:active,
+.footer__phone-text:hover,
+.footer__phone-text:active {
+  color: #86bc42;
 }
 .footer__mail {
 }
@@ -1039,6 +1093,7 @@ img {
   .container {
     width: 375px;
   }
+
   .form__input-box {
     padding: 10px;
     border-radius: 24px;
@@ -1068,7 +1123,7 @@ img {
     position: absolute;
     left: 0;
     top: 100%;
-    background-color: #4b5464;
+    background-color: rgba(75, 84, 100, 0.93);
     padding: 50px;
     z-index: 1000;
     transform: translateX(-100%);
@@ -1090,9 +1145,10 @@ img {
   .header__nav .nav__item {
     border: 1px solid #fff;
     padding: 8px 16px;
-    border-radius: 20px;
+    border-radius: 25px;
   }
-  .header__nav .nav__item:hover {
+  .header__nav .nav__item:hover,
+  .header__nav .nav__item:active {
     border: 1px solid #86bc42;
   }
 
@@ -1101,6 +1157,8 @@ img {
   }
   .header__nav .nav__link {
     color: #fff;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
@@ -1317,7 +1375,7 @@ img {
     width: 59%;
   }
   .indoor-plant--left {
-    transform: translateY(-120%);
+    transform: translateY(-110%);
   }
   .socials-box {
     text-align: left;

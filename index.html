@@ -6,6 +6,10 @@
     <title>ОСББ "Тест"</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -33,9 +37,11 @@
           </a>
         </address>
         <div class="header__logo logo">
-          <svg class="logo">
-            <use href="./img/sprite.svg#icon-logo"></use>
-          </svg>
+          <a class="header__logo-link link" href="#">
+            <svg class="logo">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
         </div>
         <div class="header__right-box">
           <button class="header__registration-btn" type="button">
@@ -53,11 +59,11 @@
         </div>
       </div>
       <div class="header__bottom-box">
-        <div class="header__logo logo">
+        <a class="header__logo logo" href="#">
           <svg class="logo">
             <use href="./img/sprite.svg#icon-logo"></use>
           </svg>
-        </div>
+        </a>
 
         <input class="header__nav-burger-lbl" type="checkbox" id="burger" />
 
@@ -311,9 +317,9 @@
                   />
                   <div class="utilities__item-number">1</div>
                 </div>
-                <div class="utilities__item-text">
+                <a class="utilities__item-text link" href="#">
                   Київенерго (електропостачання)
-                </div>
+                </a>
               </li>
               <li class="utilities__item">
                 <div class="utilities__item-img-box">
@@ -327,9 +333,9 @@
                   />
                   <div class="utilities__item-number">2</div>
                 </div>
-                <div class="utilities__item-text">
+                <a class="utilities__item-text link" href="#">
                   Київтеплоенерго (тепло та ГВП)
-                </div>
+                </a>
               </li>
               <li class="utilities__item">
                 <div class="utilities__item-img-box">
@@ -343,7 +349,9 @@
                   />
                   <div class="utilities__item-number">3</div>
                 </div>
-                <div class="utilities__item-text">Київводоканал (ХВП)</div>
+                <a class="utilities__item-text link" href="#"
+                  >Київводоканал (ХВП)</a
+                >
               </li>
             </ul>
           </div>
@@ -439,7 +447,7 @@
           </div>
         </form>
       </section>
-      <section class="section__news section container relative">
+      <section class="section__news section container">
         <h2 class="section__title news__title">Последние новости</h2>
         <div class="slider">
           <div class="slider__box">
@@ -678,9 +686,12 @@
 
     <footer class="footer">
       <div class="socials-box">
-        <svg class="socials__logo logo">
-          <use href="./img/sprite.svg#icon-logo"></use>
-        </svg>
+        <a class="socials__logo-link" href="#">
+          <svg class="socials__logo logo">
+            <use href="./img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+
         <p class="socials__about-us">
           Огромное количество успешных проектов, не оставило нашу компанию без
           драгоценного опыта.
