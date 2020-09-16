@@ -1308,7 +1308,7 @@ img {
   .photo__list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0;
+    margin-bottom: 22px;
   }
   .photo__item {
     margin-bottom: 0;
@@ -1472,16 +1472,13 @@ img {
     padding: 46px 136px;
   }
   .form-box {
-    /* max-width: 569px; */
     border-radius: 35px;
     padding: 14px 18px;
   }
   .form__title {
-    /* max-width: 569px; */
     font-size: 36px;
   }
   .form__sub-title {
-    /* max-width: 569px; */
     font-size: 20px;
   }
   .form__input-box {
@@ -1514,6 +1511,9 @@ img {
     padding: 55px 68px 22px;
   }
   .section__photos .slider {
+    margin-bottom: 28px;
+  }
+  .photo__list {
     margin-bottom: 28px;
   }
   .photo__item {
