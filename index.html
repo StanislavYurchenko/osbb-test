@@ -4,12 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ОСББ "Тест"</title>
+    <link rel="stylesheet" href="./css/modules/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <header class="header">
@@ -450,9 +447,9 @@
       <section class="section__news section container">
         <h2 class="section__title news__title">Последние новости</h2>
         <div class="slider">
-          <div class="slider__box">
-            <ul class="slider__list list">
-              <li class="slid visually-hidden">
+          <div class="slider__box swiper-container">
+            <ul class="slider__list list swiper-wrapper">
+              <li class="slid swiper-slide">
                 <div class="slid__box">
                   <h3 class="slid__title">
                     Повышение контроля руководства за деятельностью ОСББ.
@@ -496,7 +493,7 @@
                   </a>
                 </div>
               </li>
-              <li class="slid">
+              <li class="slid swiper-slide">
                 <div class="slid__box">
                   <h3 class="slid__title">
                     Повышение контроля руководства за деятельностью ОСББ.
@@ -540,7 +537,7 @@
                   </a>
                 </div>
               </li>
-              <li class="slid visually-hidden">
+              <li class="slid swiper-slide">
                 <div class="slid__box">
                   <h3 class="slid__title">
                     Повышение контроля руководства за деятельностью ОСББ.
@@ -584,7 +581,7 @@
                   </a>
                 </div>
               </li>
-              <li class="slid visually-hidden">
+              <li class="slid swiper-slide">
                 <div class="slid__box">
                   <h3 class="slid__title">
                     Повышение контроля руководства за деятельностью ОСББ.
@@ -629,23 +626,22 @@
                 </div>
               </li>
             </ul>
-          </div>
+            <div class="slider__control">
+              <svg class="control__prev-img">
+                <use href="./img/sprite.svg#icon-arrow-prev"></use>
+              </svg>
 
-          <div class="slider__control">
-            <svg class="control__prev-img">
-              <use href="./img/sprite.svg#icon-arrow-prev"></use>
-            </svg>
+              <ul class="control__list list">
+                <li class="control__item"></li>
+                <li class="control__item control__item--active"></li>
+                <li class="control__item"></li>
+                <li class="control__item"></li>
+              </ul>
 
-            <ul class="control__list list">
-              <li class="control__item"></li>
-              <li class="control__item control__item--active"></li>
-              <li class="control__item"></li>
-              <li class="control__item"></li>
-            </ul>
-
-            <svg class="control__next-img">
-              <use href="./img/sprite.svg#icon-arrow-next"></use>
-            </svg>
+              <svg class="control__next-img">
+                <use href="./img/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </div>
           </div>
         </div>
         <button class="section__button" type="button">

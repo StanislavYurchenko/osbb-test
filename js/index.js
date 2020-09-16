@@ -5,20 +5,21 @@ import Swiper from './modules/swiper/swiper-bundle.esm.browser.min.js';
 
 var mySwiper = new Swiper('.swiper-container', {
   // // Optional parameters
-  // direction: 'vertical',
-  // loop: true,
-  // // If we need pagination
-  // pagination: {
-  //       el: '.swiper-pagination',
-  // },
-  // // Navigation arrows
-  // navigation: {
-  //       nextEl: '.swiper-button-next',
-  //       prevEl: '.swiper-button-prev',
-  // },
-  // // And if we need scrollbar
-  // scrollbar: {
-  //       el: '.swiper-scrollbar',
-  // },
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.control__list',
+    bulletClass: 'control__item',
+    bulletActiveClass: 'control__item--active',
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.control__next-img',
+    prevEl: '.control__prev-img',
+  },
+  //   // And if we need scrollbar
+  //   scrollbar: {
+  //     el: '.swiper-scrollbar',
+  //   },
 });
 console.log(mySwiper);
