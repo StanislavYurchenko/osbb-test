@@ -163,9 +163,9 @@
         </div>
 
         <div class="slider">
-          <div class="slider__box">
-            <ul class="photo__list list">
-              <li class="photo__item">
+          <div class="slider__box photo-swiper-container">
+            <ul class="photo__list list swiper-wrapper">
+              <li class="photo__item swiper-slide">
                 <div class="photo__img-box">
                   <img
                     class="photo__item-img"
@@ -180,7 +180,7 @@
                   />
                 </div>
               </li>
-              <li class="photo__item">
+              <li class="photo__item swiper-slide">
                 <div class="photo__img-box">
                   <img
                     class="photo__item-img"
@@ -195,7 +195,22 @@
                   />
                 </div>
               </li>
-              <li class="photo__item">
+              <li class="photo__item swiper-slide">
+                <div class="photo__img-box">
+                  <img
+                    class="photo__item-img"
+                    srcset="
+                      ./img/new-photo/new-photo-3.jpg,
+                      ./img/new-photo/new-photo-3@2x.jpg 2x
+                    "
+                    alt="новое фото дома"
+                    src="./img/new-photo/new-photo-3.jpg"
+                    width="345"
+                    height="238"
+                  />
+                </div>
+              </li>
+              <li class="photo__item swiper-slide">
                 <div class="photo__img-box">
                   <img
                     class="photo__item-img"
@@ -211,22 +226,22 @@
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="slider__control photo__control">
-            <svg class="control__prev-img">
-              <use href="./img/sprite.svg#icon-arrow-prev"></use>
-            </svg>
+            <div class="slider__control photo__control">
+              <svg class="control__prev-img">
+                <use href="./img/sprite.svg#icon-arrow-prev"></use>
+              </svg>
 
-            <ul class="control__list list">
-              <li class="control__item"></li>
-              <li class="control__item control__item--active"></li>
-              <li class="control__item"></li>
-              <li class="control__item"></li>
-            </ul>
+              <ul class="control__list list">
+                <li class="control__item"></li>
+                <li class="control__item control__item--active"></li>
+                <li class="control__item"></li>
+                <li class="control__item"></li>
+              </ul>
 
-            <svg class="control__next-img">
-              <use href="./img/sprite.svg#icon-arrow-next"></use>
-            </svg>
+              <svg class="control__next-img">
+                <use href="./img/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </div>
           </div>
         </div>
 
@@ -808,5 +823,6 @@
       </div>
     </footer>
     <script src="./js/index.js" type="module"></script>
+    <script src="./js/sliders.js" type="module"></script>
   </body>
 </html>
