@@ -1094,34 +1094,6 @@ img {
 }
 
 /* MEDIA */
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 375px;
-  }
-
-  .form__input-box {
-    padding: 10px;
-    border-radius: 24px;
-    margin-bottom: 8px;
-    /* max-width: 400px; */
-  }
-  .form__steps {
-    display: none;
-  }
-
-  .photo .photo__control {
-    /* display: none; */
-    margin: 0 auto;
-  }
-  .photo__item-img {
-  }
-  .slider__box {
-    height: 734px;
-  }
-  .tariffs {
-    max-width: 345px;
-  }
-}
 
 @media screen and (max-width: 1279px) {
   .header__bottom-box {
