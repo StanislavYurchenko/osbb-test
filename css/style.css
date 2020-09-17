@@ -1023,7 +1023,7 @@ img {
 
 .nav__item:hover .nav__link::before,
 .nav__item:focus .nav__link::before {
-  background-image: url(../img/list-arrow-focus.svg);
+  background-image: url(../img/list-arrow-active.svg);
 }
 /* FOOTER ADDRESS */
 
@@ -1145,7 +1145,7 @@ img {
   .header__nav-burger-lbl:checked + .header__nav-burger-box + .header__nav {
     transform: translateX(0%);
   }
-  .header__nav--focus {
+  .header__nav--active {
     transform: translateX(0%);
   }
   .header__nav .nav__list {
