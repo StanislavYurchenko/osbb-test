@@ -4,6 +4,7 @@ html {
 }
 body {
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 *,
@@ -445,6 +446,7 @@ img {
   padding-bottom: 30px;
 }
 .registration__form {
+  display: block;
   max-width: 450px;
   padding: 18px;
   background: rgba(47, 45, 55, 0.25);
@@ -487,7 +489,7 @@ img {
   border-radius: 15px;
   border: 1px solid #8f8f8f;
   padding: 5px 8px;
-  font-family: Mulish;
+  font-family: 'Mulish', sans-serif;
   font-size: 12px;
   line-height: 15px;
   color: #6e788d;
@@ -808,9 +810,7 @@ img {
   padding: 0 17px;
   margin: 0 0 16px;
 }
-.visually-hidden .slid__title {
-  display: none;
-}
+
 .slid__img-box {
   margin: 0 0 21px;
 }
@@ -1109,8 +1109,8 @@ img {
     display: none;
   }
 
-  .photo__control {
-    display: none;
+  .photo .photo__control {
+    /* display: none; */
     margin: 0 auto;
   }
   .photo__item-img {
@@ -1173,7 +1173,7 @@ img {
     font-weight: 600;
   }
   .tariffs {
-    width: 708px;
+    /* width: 708px; */
   }
 }
 
@@ -1346,6 +1346,7 @@ img {
     background-image: url(../img/tariffs-bg/tariffs-bg-md.jpg);
   }
   .tariffs {
+    width: 708px;
     padding: 26px 23px 21px;
   }
   .tariffs__box {

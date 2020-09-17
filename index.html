@@ -95,7 +95,7 @@
     <main>
       <section class="section__registration section">
         <h2 class="visually-hidden">Регистрация</h2>
-        <form class="registration__form form" action="#">
+        <form class="registration__form form" action="#" id="registration-form">
           <span class="form__title">Зарегистрируйтесь сейчас </span>
           <span class="form__sub-title">чтобы знать новости первым!</span>
           <div class="form-box">
@@ -105,15 +105,20 @@
                 type="text"
                 name="user-name"
                 placeholder="Ваше имя"
-                minlength="2"
+                minlength="1"
+                maxlength="15"
+                pattern="[\D]{1,15}"
+                title="Имя должно содержать от 1 до 15 букв"
                 required
               />
               <input
                 class="form__input-phone"
-                type="text"
+                type="tel"
                 name="user-phone"
                 placeholder="Ваш номер телефона"
-                minlength="7"
+                pattern="[+][\d]{2}[(][\d]{3}[)]-[\d]{3}-[\d]{4}"
+                maxlength="12"
+                title="Введите 12 цифр, включительно с международным кодом"
                 required
               />
             </div>
@@ -822,7 +827,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/burger-menu.js" type="module"></script>
     <script src="./js/sliders.js" type="module"></script>
+    <script src="./js/registration-form.js" type="module"></script>
   </body>
 </html>
