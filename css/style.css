@@ -907,15 +907,15 @@ img {
   margin-right: 17px;
 }
 
-.control__item--focus {
+.control__item--active {
   width: 21px;
   height: 21px;
   background-color: #fff;
   border: 1px solid #6e788d;
 }
 
-.control__item--focus:hover,
-.control__item--focus:focus {
+.control__item--active:hover,
+.control__item--active:focus {
   background-color: #fff;
   border: 1px solid #86bc42;
 }
