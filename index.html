@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ОСББ "Тест"</title>
+    <meta name="author" content="Stanislav Yurchenko" />
+    <meta name="keywords" content="тестовая работа" />
+    <meta name="description" content="HTML CSS JavaScript" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="./css/modules/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="visually-hidden">ОСББ "Тест"</h1>
+      <div class="header__top-box">
+        <address class="header__address address">
+          <a
+            class="header__phone phone link address__link"
+            href="tel:+38000-000-00-00"
+          >
+            <svg class="header__phone-img phone-img">
+              <use href="./img/sprite.svg#icon-phone"></use>
+            </svg>
+            <div class="header__phone-text">+38 (000) 000 00 00</div>
+          </a>
+          <a
+            class="header__mail mail link address__link"
+            href="mailto:test@i.ua"
+          >
+            <svg class="header__mail-img mail-img">
+              <use href="./img/sprite.svg#icon-mail"></use>
+            </svg>
+
+            <div class="header__mail-text">test@i.ua</div>
+          </a>
+        </address>
+        <div class="header__logo logo">
+          <a class="header__logo-link link" href="#">
+            <svg class="logo">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__right-box">
+          <button class="header__registration-btn" type="button">
+            Регистрация
+          </button>
+          <button class="header__log-in-btn" type="button">
+            <svg class="log-in__svg--man">
+              <use href="./img/sprite.svg#icon-man"></use>
+            </svg>
+            <svg class="log-in__svg--arrow">
+              <use href="./img/sprite.svg#icon-arrow"></use>
+            </svg>
+            <span class="log-in__text">Вход</span>
+          </button>
+        </div>
+      </div>
+      <div class="header__bottom-box">
+        <a class="header__logo logo" href="#">
+          <svg class="logo">
+            <use href="./img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+
+        <input class="header__nav-burger-lbl" type="checkbox" id="burger" />
+
+        <label class="header__nav-burger-box" for="burger">
+          <span class="header__nav-burger"></span>
+        </label>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list list">
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Главная</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Объявления</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Управление ОСМД</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Отчетность деятельности</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Форум для жителей</a>
+            </li>
+            <li class="nav__item item">
+              <a class="nav__link link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section__registration section">
+        <h2 class="visually-hidden">Регистрация</h2>
+        <form class="registration__form form" action="#" id="registration-form">
+          <span class="form__title">Зарегистрируйтесь сейчас </span>
+          <span class="form__sub-title">чтобы знать новости первым!</span>
+          <div class="form-box">
+            <div class="form__input-box">
+              <input
+                class="form__input-name"
+                type="text"
+                name="user-name"
+                placeholder="Ваше имя"
+                minlength="1"
+                maxlength="15"
+                pattern="[\D]{1,15}"
+                title="Имя должно содержать от 1 до 15 букв"
+                required
+              />
+              <input
+                class="form__input-phone"
+                type="tel"
+                name="user-phone"
+                placeholder="Ваш номер телефона"
+                pattern="[+][\d]{2}[(][\d]{3}[)]-[\d]{3}-[\d]{4}"
+                maxlength="12"
+                title="Введите 12 цифр, включительно с международным кодом"
+                required
+              />
+            </div>
+            <button class="registration__btn" type="submit">Готово!</button>
+          </div>
+          <ul class="form__steps list">
+            <li class="step step-1">
+              <div class="step__img-box step__img-box--step-1">
+                <svg class="step-img step-img--step-1">
+                  <use href="./img/sprite.svg#icon-reg-step-1"></use>
+                </svg>
+              </div>
+              <div class="step__description step__description--step1">
+                Регистрируетесь
+              </div>
+            </li>
+            <li class="step step-2">
+              <div class="step__img-box step__img-box--step-2">
+                <svg class="step-img step-img--step-2">
+                  <use href="./img/sprite.svg#icon-reg-step-2"></use>
+                </svg>
+              </div>
+              <div class="step__description step__description--step2">
+                Вкурсе всех новостей
+              </div>
+            </li>
+            <li class="step step-3">
+              <div class="step__img-box step__img-box--step-3">
+                <svg class="step-img step-img--step-3">
+                  <use href="./img/sprite.svg#icon-reg-step-3"></use>
+                </svg>
+              </div>
+              <div class="step__description step__description--step3">
+                Просто и понятно
+              </div>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section class="section__photos section container">
+        <h2 class="section__title">Последние фото</h2>
+        <div class="section__about">
+          Мы создаем новый стиль управления жильем! Чем наш стиль работы
+          отличается от других? Мы создаем территорию для комфортного,
+          безопасного жизни людей, доверивших управление своим домом Жилой
+          управляющей компании.
+        </div>
+
+        <div class="slider">
+          <div class="slider__box photo-swiper-container">
+            <ul class="photo__list list swiper-wrapper">
+              <li class="photo__item swiper-slide">
+                <div class="photo__img-box">
+                  <img
+                    class="photo__item-img"
+                    srcset="
+                      ./img/new-photo/new-photo-1.jpg,
+                      ./img/new-photo/new-photo-1@2x.jpg 2x
+                    "
+                    alt="новое фото дома"
+                    src="./img/new-photo/new-photo-1.jpg"
+                    width="345"
+                    height="238"
+                  />
+                </div>
+              </li>
+              <li class="photo__item swiper-slide">
+                <div class="photo__img-box">
+                  <img
+                    class="photo__item-img"
+                    srcset="
+                      ./img/new-photo/new-photo-2.jpg,
+                      ./img/new-photo/new-photo-2@2x.jpg 2x
+                    "
+                    alt="новое фото дома"
+                    src="./img/new-photo/new-photo-2.jpg"
+                    width="345"
+                    height="238"
+                  />
+                </div>
+              </li>
+              <li class="photo__item swiper-slide">
+                <div class="photo__img-box">
+                  <img
+                    class="photo__item-img"
+                    srcset="
+                      ./img/new-photo/new-photo-3.jpg,
+                      ./img/new-photo/new-photo-3@2x.jpg 2x
+                    "
+                    alt="новое фото дома"
+                    src="./img/new-photo/new-photo-3.jpg"
+                    width="345"
+                    height="238"
+                  />
+                </div>
+              </li>
+              <li class="photo__item swiper-slide">
+                <div class="photo__img-box">
+                  <img
+                    class="photo__item-img"
+                    srcset="
+                      ./img/new-photo/new-photo-3.jpg,
+                      ./img/new-photo/new-photo-3@2x.jpg 2x
+                    "
+                    alt="новое фото дома"
+                    src="./img/new-photo/new-photo-3.jpg"
+                    width="345"
+                    height="238"
+                  />
+                </div>
+              </li>
+            </ul>
+            <div class="slider__control photo__control">
+              <svg class="control__prev-img">
+                <use href="./img/sprite.svg#icon-arrow-prev"></use>
+              </svg>
+
+              <ul class="control__list list">
+                <li class="control__item"></li>
+                <li class="control__item control__item--active"></li>
+                <li class="control__item"></li>
+                <li class="control__item"></li>
+              </ul>
+
+              <svg class="control__next-img">
+                <use href="./img/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <button class="section__button" type="button">Смотреть все осбб</button>
+      </section>
+      <div class="indoor-plant indoor-plant--right">
+        <picture class="indoor-plant-img">
+          <source
+            srcset="
+              ./img/indoor-plant-right/indoor-plant-right.png,
+              ./img/indoor-plant-right/indoor-plant-right@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="
+              ./img/indoor-plant-right/indoor-plant-right-md.png,
+              ./img/indoor-plant-right/indoor-plant-right-md@2x.png 2x
+            "
+            media="(min-width: 768px) and (max-width: 1279px)"
+          />
+          <source
+            srcset="
+              ./img/indoor-plant-right/indoor-plant-right-lg.png,
+              ./img/indoor-plant-right/indoor-plant-right-lg@2x.png 2x
+            "
+            media="(min-width: 1280px)"
+          />
+
+          <img
+            src="./img/indoor-plant-right/indoor-plant-right.png"
+            alt="indoor plant"
+          />
+        </picture>
+      </div>
+      <section class="section__utilities section container">
+        <h2 class="section__title utilities__title">
+          Информация про коммунальные услуги
+        </h2>
+        <div class="utilities__box">
+          <div class="utilities__box-about">
+            <div class="section__about utilities__about">
+              Присоединение дома в ОСМД актуалено и для соседних домов, в
+              которых уже успешно функционирует объединене.
+            </div>
+            <div class="section__about utilities__about">
+              Совладельцы дома, желающих присоединиться к ОСМД, должны провести
+              общее собрание, на которых утвердят форму управления домом и решат
+              присоединиться к ОСМД, с которым имеют общую придомовую
+              территорию, элементы благоустройства и тому подобное.
+            </div>
+            <div class="section__about utilities__about">
+              Далее надо письменно обратиться к председателю правления
+              соответствующего ОСМД с просьбой рассмотреть вопрос о
+              присоединении к ОСМД совладельцев дома. Правление созывает общее
+              собрание ОСМД, на которых решает вопрос о присоединении.
+            </div>
+            <div class="section__about utilities__about">
+              В случае положительного решения созывают общие общее собрание с
+              участием совладельцев обеих домов. Там утверждают новую редакцию
+              устава совместного ОСМД, решают другие вопросы, связанные с
+              текущей деятельностью ОСМД. Новая редакция устава подают
+              госрегистратору.
+            </div>
+            <div class="section__about utilities__about">
+              Третий вариант присоединения дома к созданного ОСМД - создание
+              ассоциации ОСМД.
+            </div>
+          </div>
+          <div class="utilities">
+            <h3 class="utilities__title">
+              ПОСТАЧАЛЬНИКИ ПОСЛУГ
+              <span class="br">(ПОДАТИ ПОКАЗНИКИ)</span>
+            </h3>
+            <ul class="utilities__list list">
+              <li class="utilities__item">
+                <div class="utilities__item-img-box">
+                  <img
+                    class="utilities__item-img"
+                    src="./img/circle.png"
+                    alt="circle"
+                    srcset="./img/circle@2x.png 2x"
+                    width="56"
+                    height="56"
+                  />
+                  <div class="utilities__item-number">1</div>
+                </div>
+                <a class="utilities__item-text link" href="#">
+                  Київенерго (електропостачання)
+                </a>
+              </li>
+              <li class="utilities__item">
+                <div class="utilities__item-img-box">
+                  <img
+                    class="utilities__item-img"
+                    src="./img/circle.png"
+                    alt="circle"
+                    srcset="./img/circle@2x.png 2x"
+                    width="56"
+                    height="56"
+                  />
+                  <div class="utilities__item-number">2</div>
+                </div>
+                <a class="utilities__item-text link" href="#">
+                  Київтеплоенерго (тепло та ГВП)
+                </a>
+              </li>
+              <li class="utilities__item">
+                <div class="utilities__item-img-box">
+                  <img
+                    class="utilities__item-img"
+                    src="./img/circle.png"
+                    alt="circle"
+                    srcset="./img/circle@2x.png 2x"
+                    width="56"
+                    height="56"
+                  />
+                  <div class="utilities__item-number">3</div>
+                </div>
+                <a class="utilities__item-text link" href="#"
+                  >Київводоканал (ХВП)</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section__tariffs section">
+        <form class="tariffs">
+          <h2 class="tariffs__title">тарифы</h2>
+          <div class="tariffs__box">
+            <div class="tariffs__box-left">
+              <ul class="tariffs__list list">
+                <li class="tariffs__item">
+                  <p class="tariffs__subscription">
+                    Введите площадь вашего дома (кв/м)
+                  </p>
+                  <input
+                    class="tariffs__input-text"
+                    type="text"
+                    minlength="2"
+                    value="2000"
+                    required
+                  />
+                </li>
+                <li class="tariffs__item">
+                  <p class="tariffs__subscription">
+                    Введите количество квартир
+                  </p>
+                  <input
+                    class="tariffs__input-text"
+                    type="text"
+                    minlength="1"
+                    value="56"
+                    required
+                  />
+                </li>
+                <li class="tariffs__item">
+                  <p class="tariffs__subscription">Количество месяцев</p>
+                  <label class="tariffs__label">
+                    <input
+                      class="tariffs__input-radio"
+                      type="radio"
+                      name="months"
+                      checked
+                    />
+                    <span class="tariffs__input-radio-box">
+                      <span class="tariffs__input-radio-custom"></span>
+                      <span class="tariffs__input-radio-text">3 мес.</span>
+                    </span>
+                  </label>
+                  <label class="tariffs__label">
+                    <input
+                      class="tariffs__input-radio"
+                      type="radio"
+                      name="months"
+                    />
+                    <span class="tariffs__input-radio-box">
+                      <span class="tariffs__input-radio-custom"></span>
+                      <span class="tariffs__input-radio-text">6 мес.</span>
+                    </span>
+                  </label>
+                  <label class="tariffs__label">
+                    <input
+                      class="tariffs__input-radio"
+                      type="radio"
+                      name="months"
+                    />
+                    <span class="tariffs__input-radio-box">
+                      <span class="tariffs__input-radio-custom"></span>
+                      <span class="tariffs__input-radio-text">12 мес.</span>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="tariffs__box-rigth">
+              <p class="tariffs__remark">
+                *Цена на услугу в целом - 600.00 грн.
+              </p>
+              <p class="tariffs__remark">
+                **Сумма на одну квартиру в месяц - 600.00 грн.
+              </p>
+              <div class="tariffs__info">
+                Начиная с момента регистрации ОСМД на сайте предоставляется
+                <span class="tariffs__info--color">90 дней БЕСПЛАТНОГО</span>
+                использования сервиса.
+              </div>
+              <div class="tariffs__total">
+                Стоимость:
+                <span class="tariffs__total--output">0.00</span>
+                грн
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="section__news section container">
+        <h2 class="section__title news__title">Последние новости</h2>
+        <div class="slider">
+          <div class="slider__box swiper-container">
+            <ul class="slider__list list swiper-wrapper">
+              <li class="slid swiper-slide">
+                <div class="slid__box">
+                  <h3 class="slid__title">
+                    Повышение контроля руководства за деятельностью ОСББ.
+                  </h3>
+                  <div class="slid__img-box">
+                    <picture class="slide__img">
+                      <source
+                        srcset="./img/news/news.jpg, ./img/news/news@2x.jpg 2x"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/news/news-md.jpg,
+                          ./img/news/news-md@2x.jpg 2x
+                        "
+                        media="(min-width: 768px) "
+                      />
+                      <img src="./img/news/news.jpg" alt="news photo" />
+                    </picture>
+                  </div>
+                  <div class="slid__content">
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат. Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат. Информирование о текущем балансе, сохранение
+                      истории платежей, начисление квартплат.
+                    </p>
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат.Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат.
+                    </p>
+                  </div>
+                  <a class="slider__read-more">
+                    <span class="read-more__content">Читать полностью</span>
+                    <svg class="read-more__next-img">
+                      <use href="./img/sprite.svg#icon-arrow-next"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+              <li class="slid swiper-slide">
+                <div class="slid__box">
+                  <h3 class="slid__title">
+                    Повышение контроля руководства за деятельностью ОСББ.
+                  </h3>
+                  <div class="slid__img-box">
+                    <picture class="slide__img">
+                      <source
+                        srcset="./img/news/news.jpg, ./img/news/news@2x.jpg 2x"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/news/news-md.jpg,
+                          ./img/news/news-md@2x.jpg 2x
+                        "
+                        media="(min-width: 768px) "
+                      />
+                      <img src="./img/news/news.jpg" alt="news photo" />
+                    </picture>
+                  </div>
+                  <div class="slid__content">
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат. Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат. Информирование о текущем балансе, сохранение
+                      истории платежей, начисление квартплат.
+                    </p>
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат.Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат.
+                    </p>
+                  </div>
+                  <a class="slider__read-more">
+                    <span class="read-more__content">Читать полностью</span>
+                    <svg class="read-more__next-img">
+                      <use href="./img/sprite.svg#icon-arrow-next"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+              <li class="slid swiper-slide">
+                <div class="slid__box">
+                  <h3 class="slid__title">
+                    Повышение контроля руководства за деятельностью ОСББ.
+                  </h3>
+                  <div class="slid__img-box">
+                    <picture class="slide__img">
+                      <source
+                        srcset="./img/news/news.jpg, ./img/news/news@2x.jpg 2x"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/news/news-md.jpg,
+                          ./img/news/news-md@2x.jpg 2x
+                        "
+                        media="(min-width: 768px) "
+                      />
+                      <img src="./img/news/news.jpg" alt="news photo" />
+                    </picture>
+                  </div>
+                  <div class="slid__content">
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат. Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат. Информирование о текущем балансе, сохранение
+                      истории платежей, начисление квартплат.
+                    </p>
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат.Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат.
+                    </p>
+                  </div>
+                  <a class="slider__read-more">
+                    <span class="read-more__content">Читать полностью</span>
+                    <svg class="read-more__next-img">
+                      <use href="./img/sprite.svg#icon-arrow-next"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+              <li class="slid swiper-slide">
+                <div class="slid__box">
+                  <h3 class="slid__title">
+                    Повышение контроля руководства за деятельностью ОСББ.
+                  </h3>
+                  <div class="slid__img-box">
+                    <picture class="slide__img">
+                      <source
+                        srcset="./img/news/news.jpg, ./img/news/news@2x.jpg 2x"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./img/news/news-md.jpg,
+                          ./img/news/news-md@2x.jpg 2x
+                        "
+                        media="(min-width: 768px) "
+                      />
+                      <img src="./img/news/news.jpg" alt="news photo" />
+                    </picture>
+                  </div>
+                  <div class="slid__content">
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат. Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат. Информирование о текущем балансе, сохранение
+                      истории платежей, начисление квартплат.
+                    </p>
+                    <p class="slid__content-text">
+                      Информирование о текущем балансе, сохранение истории
+                      платежей, начисление квартплат.Информирование о текущем
+                      балансе, сохранение истории платежей, начисление
+                      квартплат.
+                    </p>
+                  </div>
+                  <a class="slider__read-more">
+                    <span class="read-more__content">Читать полностью</span>
+                    <svg class="read-more__next-img">
+                      <use href="./img/sprite.svg#icon-arrow-next"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <div class="slider__control">
+              <svg class="control__prev-img">
+                <use href="./img/sprite.svg#icon-arrow-prev"></use>
+              </svg>
+
+              <ul class="control__list list">
+                <li class="control__item"></li>
+                <li class="control__item control__item--active"></li>
+                <li class="control__item"></li>
+                <li class="control__item"></li>
+              </ul>
+
+              <svg class="control__next-img">
+                <use href="./img/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <button class="section__button" type="button">
+          смотреть все новости
+        </button>
+      </section>
+      <div class="indoor-plant indoor-plant--left">
+        <picture class="indoor-plant-img">
+          <source
+            srcset="
+              ./img/indoor-plant-left/indoor-plant-left.png,
+              ./img/indoor-plant-left/indoor-plant-left@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="
+              ./img/indoor-plant-left/indoor-plant-left-md.png,
+              ./img/indoor-plant-left/indoor-plant-left-md@2x.png 2x
+            "
+            media="(min-width: 768px)  and (max-width: 1279px)"
+          />
+          <source
+            srcset="
+              ./img/indoor-plant-left/indoor-plant-left-lg.png,
+              ./img/indoor-plant-left/indoor-plant-left-lg@2x.png 2x
+            "
+            media="(min-width: 1280px)"
+          />
+
+          <img
+            src="./img/indoor-plant-left/indoor-plant-left.png"
+            alt="indoor plant"
+          />
+        </picture>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="socials-box">
+        <a class="socials__logo-link" href="#">
+          <svg class="socials__logo logo">
+            <use href="./img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+
+        <p class="socials__about-us">
+          Огромное количество успешных проектов, не оставило нашу компанию без
+          драгоценного опыта.
+        </p>
+        <p class="socials__about-us">Мы профессионалы своего дела!</p>
+        <ul class="socials__list list">
+          <li class="socials__item">
+            <a class="link" href="#">
+              <svg class="socials__img">
+                <use href="./img/sprite.svg#icon-twiter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="link" href="#">
+              <svg class="socials__img">
+                <use href="./img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="link" href="#">
+              <svg class="socials__img">
+                <use href="./img/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <div class="footer__nav-box">
+          <h3 class="footer__title title">Навигация</h3>
+          <nav class="footer__nav nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Объявления</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Управление ОСМД</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Отчетность деятельности</a>
+              </li>
+            </ul>
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Форум для жителей</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Контакты</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Регистрация</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="#">Войти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__contacts-box">
+          <h3 class="footer__title title">Контакты</h3>
+          <address class="footer__address address">
+            <a
+              class="footer__phone phone link address__link"
+              href="tel:+38000-000-00-00"
+            >
+              <svg class="footer__phone-img phone-img">
+                <use href="./img/sprite.svg#icon-phone"></use>
+              </svg>
+              <div class="footer__phone-text">+38 (000) 000 00 00</div>
+            </a>
+            <a
+              class="footer__mail mail link address__link"
+              href="mailto:test@i.ua"
+            >
+              <svg class="footer__mail-img mail-img">
+                <use href="./img/sprite.svg#icon-mail"></use>
+              </svg>
+
+              <div class="footer__mail-text">test@i.ua</div>
+            </a>
+          </address>
+        </div>
+        <div class="indoor-plant indoor-plant--footer">
+          <picture class="indoor-plant-img">
+            <source
+              srcset="
+                ./img/indoor-plant-footer/indoor-plant-footer.png,
+                ./img/indoor-plant-footer/indoor-plant-footer@2x.png 2x
+              "
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="
+                ./img/indoor-plant-footer/indoor-plant-footer-md.png,
+                ./img/indoor-plant-footer/indoor-plant-footer-md@2x.png 2x
+              "
+              media="(min-width: 768px) and (max-width: 1279px)"
+            />
+            <source
+              srcset="
+                ./img/indoor-plant-footer/indoor-plant-footer-lg.png,
+                ./img/indoor-plant-footer/indoor-plant-footer-lg@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+
+            <img
+              src="./img/indoor-plant-footer/indoor-plant-footer.png"
+              alt="indoor plant"
+            />
+          </picture>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/burger-menu.js" type="module"></script>
+    <script src="./js/sliders.js" type="module"></script>
+    <script src="./js/registration-form.js" type="module"></script>
+  </body>
+</html>
